@@ -6,12 +6,14 @@
 
 	if (isset($_POST['btn-cadastrar'])) {
 		
-		$produto = mysqli_escape_string($connection,$_POST['produto']);
-		$marca = mysqli_escape_string($connection,$_POST['marca']);
-		$cor = mysqli_escape_string($connection,$_POST['cor']);
-		$preco = mysqli_escape_string($connection,$_POST['preco']);
+		$codigo = mysqli_escape_string($connection,$_POST['codigo']);
+		$descricao = mysqli_escape_string($connection,$_POST['descricao']);
+		$qtde = mysqli_escape_string($connection,$_POST['qtde']);
+		$valorunit = mysqli_escape_string($connection,$_POST['valorunit']);
+		$dataentrada = mysqli_escape_string($connection,$_POST['dataentrada']);
+		$imagemprod = mysqli_escape_string($connection,$_POST['imagemprod']);
 
-		$sql = "INSERT INTO tbClientes(produto,marca,cor,preco)VALUES('$produto','$marca','$cor','$preco')";
+		$sql = "INSERT INTO tbprodutos(codigo,descricao,qtde,valorunit,dataentrada,imagemprod)VALUES('$codigo','$descricao','$qtde','$valorunit','$dataentrada','$imagemprod')";
 
 		if(mysqli_query($connection, $sql)) {
 

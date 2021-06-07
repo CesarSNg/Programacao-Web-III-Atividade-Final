@@ -6,13 +6,13 @@
 
 	if (isset($_POST['btn-excluir'])) {
 				
-		$id = mysqli_escape_string($connection,$_POST['id']);
+		$codigo = mysqli_escape_string($connection,$_POST['codigo']);
 
-		$sql = "DELETE FROM tbClientes WHERE id = '$id'";
+		$sql = "DELETE FROM tbprodutos WHERE codigo = '$codigo'";
 
 		if(mysqli_query($connection, $sql)) {
 
-			$_SESSION['mensagem'] = "Excluir com sucesso.";
+			$_SESSION['mensagem'] = "Excluido com sucesso.";
 
 			header('Location: ../index.php');
 		}

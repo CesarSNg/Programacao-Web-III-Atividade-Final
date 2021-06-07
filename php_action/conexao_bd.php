@@ -1,9 +1,9 @@
 <?php 
 
 	$server_name = 'localhost';
-	$user_name = 'csng';
-	$password = '';
-	$db_name = 'dbClientes';
+	$user_name = 'etecia';
+	$password = '123';
+	$db_name = 'dbEmpresa';
 
 	$connection = mysqli_connect($server_name,$user_name,$password,$db_name);
 

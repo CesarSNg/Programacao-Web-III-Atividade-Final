@@ -6,13 +6,14 @@
 
 	if (isset($_POST['btn-alterar'])) {
 		
-		$produto = mysqli_escape_string($connection,$_POST['produto']);
-		$marca = mysqli_escape_string($connection,$_POST['marca']);
-		$cor = mysqli_escape_string($connection,$_POST['cor']);
-		$preco = mysqli_escape_string($connection,$_POST['preco']);
-		$id = mysqli_escape_string($connection,$_POST['id']);
+		$descricao = mysqli_escape_string($connection,$_POST['descricao']);
+		$qtde = mysqli_escape_string($connection,$_POST['qtde']);
+		$valorunit = mysqli_escape_string($connection,$_POST['valorunit']);
+		$dataentrada = mysqli_escape_string($connection,$_POST['dataentrada']);
+		$imagemprod = mysqli_escape_string($connection,$_POST['imagemprod']);
+		$codigo = mysqli_escape_string($connection,$_POST['codigo']);
 
-		$sql = "UPDATE tbClientes SET produto = '$produto', marca = '$marca', cor = '$cor', preco = '$preco' WHERE id = '$id'";
+		$sql = "UPDATE tbprodutos SET descricao = '$descricao', qtde = '$qtde', valorunit = '$valorunit', dataentrada = '$dataentrada', imagemprod = '$imagemprod' WHERE codigo = '$codigo'";
 
 		if(mysqli_query($connection, $sql)) {
 
